@@ -43,6 +43,6 @@ int _printf(const char *format, ...)
 		}
 
 	}
-	return (count);
 	va_end(ap);
+	return (count);
 }
