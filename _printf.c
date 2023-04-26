@@ -10,11 +10,11 @@ int _printf(const char *format, ...)
 {
 	int i = 0, count = 0, val = 0;
 
+	int (*func)(va_list);
+
 	va_list ap;
 
 	va_start(ap, format);
-
-	int (*func)(va_list);
 
 	if (format == NULL)
 		return (-1);

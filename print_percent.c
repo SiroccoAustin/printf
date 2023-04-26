@@ -8,7 +8,7 @@
 
 int print_percent(va_list ap)
 {
-	int percent = 37;
+	int percent = va_arg(ap, int);
 
 	write(1, &percent, 1);
 

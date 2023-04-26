@@ -8,11 +8,13 @@
 
 int print_char(va_list ap)
 {
-	int count;
+	int count = 0, val = 0;
 
 	char c = va_arg(ap, int);
 
-	count += write(1, &c, 1);
+	val = write(1, &c, 1);
+
+	count += val;
 
 	return (count);
 }
