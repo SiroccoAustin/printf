@@ -4,6 +4,12 @@
 #include <stddef.h>
 #include <unistd.h>
 
+/**
+ * struct func - func structure
+ * @s: pointer to string
+ * @ptr: pointer to function
+ */
+
 typedef struct func
 {
 	char *s;

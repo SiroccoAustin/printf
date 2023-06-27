@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_char - print character
+ * @ap: variadic list
+ * Return: number of character
+ */
+
 int print_char(va_list ap)
 {
 	int count = 0;

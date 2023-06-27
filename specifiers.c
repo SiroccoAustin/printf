@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * check - check for a specifier and returns an appro function
+ * @format: specifier passed down
+ * Return: a function
+ */
+
 int (*check(const char *format))(va_list)
 {
 	func_t arr[] = {
