@@ -11,7 +11,7 @@ int print_int(va_list ap)
 	int count = 0, num;
 
 	num = va_arg(ap, int);
-	count = count(num);
+	count = count_digit(num);
 	print_num(num);
 	return (count);
 }
@@ -39,7 +39,7 @@ void print_num(int num)
  * Return: number of int printed
  */
 
-int count(int i)
+int count_digit(int i)
 {
 	int j = 0;
 

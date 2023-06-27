@@ -23,5 +23,7 @@ int print_str(va_list ap);
 int print_char(va_list ap);
 int print_pc(va_list ap);
 int print_int(va_list ap);
+void print_num(int num);
+int count_digit(int i);
 
 #endif /*MAIN_H*/
