@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			ptr = check(&format[i + 1]);
 			words = ptr(ap);
 			count += words;
-			i++;
+			i = i + 2;
 		}
 		if (format[i] == '\0')
 			break;
