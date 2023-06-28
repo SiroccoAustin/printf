@@ -14,7 +14,7 @@ int print_str(va_list ap)
 
 	while (str[i])
 	{
-		words = write(1, &strs[i], 1);
+		words = write(1, &str[i], 1);
 		count += words;
 		i++;
 	}
