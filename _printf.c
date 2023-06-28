@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			words = _putchar(format[i]);
+			words = write(1, &format[i], 1);
 			count += words;
 			i++;
 		}

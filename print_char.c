@@ -12,7 +12,7 @@ int print_char(va_list ap)
 
 	char c = va_arg(ap, int);
 
-	count = _putchar(c);
+	count = write(1, &c, 1);
 
 	return (count);
 }
