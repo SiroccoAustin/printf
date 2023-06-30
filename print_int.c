@@ -33,6 +33,7 @@ void print_num(int num)
 		_putchar(c);
 		z = -num;
 	}
+	z = num;
 	if (z / 10)
 		print_num(z / 10);
 	_putchar((num % 10) + '0');
@@ -50,6 +51,7 @@ int count_digit(int i)
 
 	if (i < 0)
 		z = i * -1;
+	z = i;
 	while (z != 0)
 	{
 		z /= 10;
