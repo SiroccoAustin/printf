@@ -9,8 +9,6 @@
  */
 int main(void)
 {
-	int len, len2;
-
     	int len;
     	int len2;
     	unsigned int ui;

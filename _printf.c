@@ -23,8 +23,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			f = check(&format[i + 1]);
-			words = f(ap);
+			ptr = check(&format[i + 1]);
+			words = ptr(ap);
 			count += words;
 			i = i + 2;
 			if (format[i] == '\0')
