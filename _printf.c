@@ -24,8 +24,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			f = check(&format[i + 1]);
-			value = f(ap);
-			count += value;
+			words = f(ap);
+			count += words;
 			i = i + 2;
 			if (format[i] == '\0')
 			{
@@ -34,8 +34,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			value = _putchar(format[i]);
-			count += value;
+			words = _putchar(format[i]);
+			count += words;
 			i++;
 		}
 	}
