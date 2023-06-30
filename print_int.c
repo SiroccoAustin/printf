@@ -12,6 +12,9 @@ int print_int(va_list ap)
 
 	num = va_arg(ap, int);
 	count = count_digit(num);
+
+	if (num <= 0)
+		count++;
 	print_num(num);
 	return (count);
 }
@@ -33,10 +36,11 @@ void print_num(int num)
 		_putchar(c);
 		z = -num;
 	}
-	z = num;
+	else
+		z = num;
 	if (z / 10)
 		print_num(z / 10);
-	_putchar((num % 10) + '0');
+	_putchar((z % 10) + '0');
 }
 
 /**
@@ -51,7 +55,8 @@ int count_digit(int i)
 
 	if (i < 0)
 		z = i * -1;
-	z = i;
+	else
+		z = i;
 	while (z != 0)
 	{
 		z /= 10;
