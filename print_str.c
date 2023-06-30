@@ -12,6 +12,9 @@ int print_str(va_list ap)
 
 	char *str = va_arg(ap, char *);
 
+	if (!str)
+		str = "(null)";
+
 	while (str[i])
 	{
 		words = write(1, &str[i], 1);

@@ -26,28 +26,33 @@ void print_num(int num)
 {
 	char c = '-';
 
+	unsigned int z;
+
 	if (num < 0)
+	{
 		_putchar(c);
-	if (num / 10)
-		print_num(num / 10);
+		z = -num;
+	}
+	if (z / 10)
+		print_num(z / 10);
 	_putchar((num % 10) + '0');
 }
 
 /**
- * count - count number of digits to print
+ * count_digit - count number of digits to print
  * @i: parameter
  * Return: number of int printed
  */
 
 int count_digit(int i)
 {
-	int j = 0;
+	unsigned int j = 0, z;
 
 	if (i < 0)
-		i *= -1;
-	while (i != 0)
+		z = i * -1;
+	while (z != 0)
 	{
-		i /= 10;
+		z /= 10;
 		j++;
 	}
 	return (j);

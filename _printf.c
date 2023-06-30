@@ -21,21 +21,23 @@ int _printf(const char *format, ...)
 
 	while (format[i])
 	{
-		if (format[i] != '%')
-		{
-			words = write(1, &format[i], 1);
-			count += words;
-			i++;
-		}
 		if (format[i] == '%')
 		{
-			ptr = check(&format[i + 1]);
-			words = ptr(ap);
-			count += words;
+			f = check(&format[i + 1]);
+			value = f(ap);
+			count += value;
 			i = i + 2;
+			if (format[i] == '\0')
+			{
+				break;
+			}
 		}
-		if (format[i] == '\0')
-			break;
+		else
+		{
+			value = _putchar(format[i]);
+			count += value;
+			i++;
+		}
 	}
 	va_end(ap);
 	return (count);
