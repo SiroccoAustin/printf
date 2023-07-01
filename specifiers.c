@@ -13,6 +13,7 @@ int (*check(const char *format))(va_list)
 		{"s", print_str},
 		{"%", print_pc},
 		{"d", print_int},
+		{"i", print_int},
 		{NULL, NULL}
 	};
 	int i = 0;
